@@ -16,3 +16,6 @@
 $ git add .
 $ git commit -m "message"
 $ git push origin master
+(깃에 ud)->서버내 ~/srv/INDEXWEB 이동
+$git pull origin master
+
