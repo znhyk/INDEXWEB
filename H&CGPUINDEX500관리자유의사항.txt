@@ -11,3 +11,8 @@
 ->점검을 실시하고, handler.py 및 cleaner.py의
 #코드레드 부분을 수정하여, 올바르게 CSV파일이
 정렬되도록 한다.
+
+4-1.업데이트 시 깃->아마존클론 순
+$ git add .
+$ git commit -m "message"
+$ git push origin master
