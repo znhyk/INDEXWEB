@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="국내 유통되는 500개 이상의 그래픽카드 소매가를 종합하여 산출, 제공하는 페이지입니다.">
+    <meta name="author" content="스태커블">
+
+    <title>스태커블 마이닝 GPU Index 500+</title>
+    {% load static %}
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+    <script src="{% static 'js/chart-area.js' %}"></script>
+    <script src="{% static 'js/user-js.js' %}"></script>
+    <script src="{% static 'js/card.js' %}"></script>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar Title -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/gpu_index_500">
+                <div class="sidebar-brand-text mx-3"><sup>스태커블 마이닝</sup><br>VGA Index 500+</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Nvidia
+            </div>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#RTX3000"
+                    aria-expanded="true" aria-controls="RTX3000">
+                    <span>RTX 3000 series</span>
+                </a>
+                <div id="RTX3000" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">RTX 3000 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/3090">Geforce RTX 3090</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/3080">Geforce RTX 3080</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/3070">Geforce RTX 3070</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/3060">Geforce RTX 3060</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/3050">Geforce RTX 3050</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#RTX2000"
+                    aria-expanded="true" aria-controls="RTX2000">
+                    <span>RTX 2000 series</span>
+                </a>
+                <div id="RTX2000" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">RTX 2000 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/2080">Geforce RTX 2080</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/2070">Geforce RTX 2070</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/2060">Geforce RTX 2060</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#GTX1000"
+                    aria-expanded="true" aria-controls="GTX1000">
+                    <span>GTX 1000 series</span>
+                </a>
+                <div id="GTX1000" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">GTX 1000 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/1660">Geforce GTX 1660</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/1080">Geforce GTX 1080</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/1070">Geforce GTX 1070</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/1060">Geforce GTX 1060</a>
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                AMD
+            </div>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#RX6000" aria-expanded="true"
+                    aria-controls="RX6000">
+                    <span>RX6000</span>
+                </a>
+                <div id="RX6000" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">RX 6000 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/6900">Radeon RX 6900</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/6800">Radeon RX 6800</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/6700">Radeon RX 6700</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/6600">Radeon RX 6600</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#RX5000" aria-expanded="true"
+                    aria-controls="RX5000">
+                    <span>RX5000</span>
+                </a>
+                <div id="RX5000" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">RX 5000 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/5900">Radeon RX 5900</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/5800">Radeon RX 5800</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/5700">Radeon RX 5700</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/5600">Radeon RX 5600</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#RX500" aria-expanded="true"
+                    aria-controls="RX500">
+                    <span>RX500</span>
+                </a>
+                <div id="RX500" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">RX 500 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/590">Radeon RX 590</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/580">Radeon RX 580</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/570">Radeon RX 570</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/560">Radeon RX 560</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- List -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#RX400" aria-expanded="true"
+                    aria-controls="RX400">
+                    <span>RX400</span>
+                </a>
+                <div id="RX400" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">RX 400 series</h6>
+                        <a class="collapse-item" href="/gpu_index_500/series/480">Radeon RX 480</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/470">Radeon RX 470</a>
+                        <a class="collapse-item" href="/gpu_index_500/series/460">Radeon RX 460</a>
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggle Button(on Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle Button(on Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Searchbar -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="RTX 3060..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="RTX 3060..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">상세보기</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-10 col-lg-8">
+                            <div class="card shadow mb-4">
+
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 id="card_title" class="m-0 font-weight-bold text-primary"></h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                    <a class="btn btn-secondary mt-2" href="javascript:prev();">이전달</a>
+                                    <div class="float-right"><a class="btn btn-primary mt-2"
+                                            href="javascript:next();">다음달</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy;스태커블 마이닝<br><sub>STACKABLE MINING CREW</sub></span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- raw data here -->
+        <p id="data" style="display: none;">{{line_list}}</p>
+        <script>
+            window.onload = function () {
+                raw_data = document.getElementById("data").innerText;
+                raw_data_array = clear_data(raw_data).split(',');
+                specific_chart(raw_data_array);
+
+                var now_location = document.location.href;
+                var array = now_location.split('\/');
+                var year = array[6];
+                var month = array[7];
+
+                document.getElementById("card_title").innerText = raw_data_array[1] + "\t" + year + "년" + "\t" + month + "월";
+            }
+
+            function next() {
+                var now_location = document.location.href;
+                var array = now_location.split('\/');
+                var code = array[5];
+                var year = array[6];
+                var month = array[7];
+
+                if (month == get_month()) {
+                    alert("다음 데이터가 없습니다.");
+                    return;
+                }
+
+                if (month == 12) {
+                    year = parseInt(year) + 1;
+                    month = 1;
+                }else{
+                    month = parseInt(month) + 1;
+                }
+                window.location.href = "/gpu_index_500/specific/" + code + "/" + year + "/" + month;
+                return;
+            }
+
+            function prev() {
+                var now_location = document.location.href;
+                var array = now_location.split('\/');
+                var code = array[5];
+                var year = array[6];
+                var month = array[7];
+
+                if (month == 1) {
+                    year = parseInt(year) - 1;
+                    month = 12;
+                }else{
+                    month = parseInt(month) - 1;
+                }
+                window.location.href = "/gpu_index_500/specific/" + code + "/" + year + "/" + month;
+                return;
+            }
+        </script>
+</body>
+
+</html>

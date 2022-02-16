@@ -1,0 +1,25 @@
+def series_to_num_searcher(series_num):#제품시리즈로 검색하여 stock_num_list 반환
+    filename=single_file_namer_now()#시리즈검색=>당월검색으로 제한
+    fr=open(filename,'r',encoding='utf-8')
+    stock_num_list=[]
+    series_num=str(series_num)
+    rdr=csv.reader(fr)
+    for line in rdr:
+        if series_num in line[1]:
+            stock_num_list.append(line[0])
+        else:
+            pass
+    fr.close()
+    return stock_num_list
+
+def series_to_num_searcher_bin(series_num):#제품시리즈로 검색하여 stock_num_list 반환 -바이너리 검색 지원O
+    with open("month_pickle.bin","rb") as fr2:
+        month_data = pickle.load(fr2)
+        stock_num_list=[]
+        series_num=str(series_num)
+        for line in month_data:
+            if series_num in line[1]:
+                stock_num_list.append(line[0])
+            else:
+                pass
+    return stock_num_list
