@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-@7&_3u5^zo*g8u&i7%cum82dnft6ls@@4mc7wgmn*g$4yz+=*-
 DEBUG = False#개발모드 전환 시 True로 바꾸기
 
 ALLOWED_HOSTS = [
+    '*',
     '.ap-northeast-2.compute.amazonaws.com',
     '.vga.today',
 ]

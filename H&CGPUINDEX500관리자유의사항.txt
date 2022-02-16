@@ -16,6 +16,15 @@
 $ git add .
 $ git commit -m "message"
 $ git push origin master
-(깃에 ud)->서버내 ~/srv/INDEXWEB 이동
+(로컬에서 깃으로 ud)->서버내 ~/srv/INDEXWEB 이동
+
 $git pull origin master
+
+$sudo cp -f /srv/INDEXWEB/.config/nginx/seed.conf /etc/nginx/sites-available/seed.conf
+$sudo ln -sf /etc/nginx/sites-available/seed.conf /etc/nginx/sites-enabled/seed.conf
+(데몬=백그라운드에 복붙,링크)
+
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart uwsgi nginx
+(새로고침, 재시작)
 
