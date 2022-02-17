@@ -37,7 +37,7 @@ function make_data_array(raw_data_array, day) {
 }
 
 function make_card(data_array, year, month, day) {
-	if(data_array.length == day){
+	if(data_array[0].length == day + 2){
         var html = "<div class=\"d-sm-flex align-items-center justify-content-between mb-4\"><h1 class=\"h3 mb-0 text-gray-800\">";
         if (data_array[0][1].indexOf("1060") != -1) {
             html += "Nvidia Geforce GTX 1060</h1></div>";
@@ -91,9 +91,9 @@ function make_card(data_array, year, month, day) {
             temp += "</div></div><div class=\"col-auto\"><ruby>";
             if (data_array[i].length < 4) {
                 temp += "<i class=\"fas fa-sort-down fa-2x text-primary\">집계중</i><rp><rt class=\"text-right\"></rt></rp></ruby></div></div></div></div></div></a>";
-            } else if (data_array[i][day + 1] > data_array[i][day]) {
+            } else if (data_array[i][day + 1] - data_array[i][day] > 0) {
                 temp += "<i class=\"fas fa-sort-up fa-2x text-danger\">" + (data_array[i][day + 1] - data_array[i][day]) + "</i><rp><rt class=\"text-right\">전일대비</rt></rp></ruby></div></div></div></div></div></a>";
-            } else if (data_array[i][day + 1] < data_array[i][day]) {
+            } else if (data_array[i][day + 1] - data_array[i][day] < 0) {
                 temp += "<i class=\"fas fa-sort-down fa-2x text-primary\">" + (data_array[i][day] - data_array[i][day + 1]) + "</i><rp><rt class=\"text-right\">전일대비</rt></rp></ruby></div></div></div></div></div></a>";
             } else {
                 temp += "<i class=\"fas fa-2x text-secondary\">0</i><rp><rt class=\"text-right\"></rt></rp></ruby></div></div></div></div></div></a>";
@@ -165,9 +165,9 @@ function make_card(data_array, year, month, day) {
             temp += "</div></div><div class=\"col-auto\"><ruby>";
             if (data_array[i].length < 4) {
                 temp += "<i class=\"fas fa-sort-down fa-2x text-primary\">집계중</i><rp><rt class=\"text-right\"></rt></rp></ruby></div></div></div></div></div></a>";
-            } else if (data_array[i][day + 1] > data_array[i][day]) {
+            } else if (data_array[i][day + 1] - data_array[i][day] > 0) {
                 temp += "<i class=\"fas fa-sort-up fa-2x text-danger\">" + (data_array[i][day + 1] - data_array[i][day]) + "</i><rp><rt class=\"text-right\">전일대비</rt></rp></ruby></div></div></div></div></div></a>";
-            } else if (data_array[i][day + 1] < data_array[i][day]) {
+            } else if (data_array[i][day + 1] - data_array[i][day] < 0) {
                 temp += "<i class=\"fas fa-sort-down fa-2x text-primary\">" + (data_array[i][day] - data_array[i][day + 1]) + "</i><rp><rt class=\"text-right\">전일대비</rt></rp></ruby></div></div></div></div></div></a>";
             } else {
                 temp += "<i class=\"fas fa-2x text-secondary\">0</i><rp><rt class=\"text-right\"></rt></rp></ruby></div></div></div></div></div></a>";
