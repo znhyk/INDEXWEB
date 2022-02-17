@@ -305,7 +305,7 @@ def index_pickle_checker():#유통기한 전에 반드시 피클을 소비하게
     with open("index_time_pickle.bin","rb") as fr2:
         pickle_time = pickle.load(fr2)
     now_time=time.time()
-    if now_time-pickle_time < 10:#마지막 피클링(csv파일 직접 참조)된 시간으로부터 1시간 이내인 경우/개발자모드 세팅 10초
+    if now_time-pickle_time < 3600:#마지막 피클링(csv파일 직접 참조)된 시간으로부터 1시간 이내인 경우/개발자모드 세팅 10초
         return index_data
     else:#마지막 피클링된 시간으로부터 1시간 이상 경과한 경우, 시간을 기록하고 다시 피클링한다.
         index_data=index_pickler()
@@ -330,7 +330,7 @@ def this_month_pickle_checker():
     with open("month_time_pickle.bin","rb") as fr2:
         pickle_time = pickle.load(fr2)
     now_time=time.time()
-    if now_time-pickle_time < 10:#마지막 피클링(csv파일 직접 참조)된 시간으로부터 1시간 이내인 경우/개발자모드 세팅 10초
+    if now_time-pickle_time < 3600:#마지막 피클링(csv파일 직접 참조)된 시간으로부터 1시간 이내인 경우/개발자모드 세팅 10초
         return month_data
     else:#마지막 피클링된 시간으로부터 1시간 이상 경과한 경우, 시간을 기록하고 다시 피클링한다.
         month_data=this_month_pickler()
