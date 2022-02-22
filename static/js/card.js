@@ -5,7 +5,7 @@ function make_raw_data_array(raw_data) {
 function make_data_array(raw_data_array, day) {
     try {
         var array_length = (raw_data_array.length / (day + 2));
-        var data_array = new Array(array_length);
+        var data_array = new Array(array_length + 1);
         for (var i = 0; i < array_length; i++) {
             data_array[i] = new Array(day + 2);
             for (var j = 0; j < day + 2; j++) {
@@ -25,7 +25,7 @@ function make_data_array(raw_data_array, day) {
             day = day - 1;
         }
         var array_length = (raw_data_array.length / (day + 2));
-        var data_array = new Array(array_length);
+        var data_array = new Array(array_length + 1);
         for (var i = 0; i < array_length; i++) {
             data_array[i] = new Array(day + 2);
             for (var j = 0; j < day + 2; j++) {

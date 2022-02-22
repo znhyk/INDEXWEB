@@ -161,6 +161,24 @@ def series_to_num_searcher(series_num):#제품시리즈로 검색하여 stock_nu
             pass
     fr.close()
     return stock_num_list
+    
+def today_searcher():
+    years=['25','24','23','22']
+    months=['12','11','10','09','08','07','06','05','04','03','02','01']
+    for year in years:
+        for month in months:
+            try:
+                filename=index_file_namer(year,month)
+                fr=open(filename,'r',encoding='utf-8')
+                rdr=csv.reader(fr)
+                days=[]
+                for line in rdr:
+                    days.append(line[0])
+                today=days[-1]
+                fr.close()
+                return today
+            except:
+                pass
 
 def series_to_num_searcher_bin(series_num):#제품시리즈로 검색하여 stock_num_list 반환 -바이너리 검색 지원O
     with open("month_pickle.bin","rb") as fr2:
