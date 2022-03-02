@@ -54,8 +54,3 @@ function get_month() {
     var today = new Date();
     return today.getMonth() + 1;
 }
-
-function get_day() {
-    var today = new Date();
-    return today.getDate();
-}

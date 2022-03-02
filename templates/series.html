@@ -254,7 +254,8 @@
 
             <script>
                 window.onload = function () {
-                    make_card(make_data_array(document.getElementById("data").innerText.replace(/\'/g, '').replace(/\[/g, '').replace(/]/g, '').replace(/\s/g, '').split(','), get_day()), get_year(), get_month(), get_day());
+					var day = parseInt(document.getElementById("date").innerText);
+                    make_card(make_data_array(document.getElementById("data").innerText.replace(/\'/g, '').replace(/\[/g, '').replace(/]/g, '').replace(/\s/g, '').split(','), day), get_year(), get_month(), day);
                 }
             </script>
 			<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

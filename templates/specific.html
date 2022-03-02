@@ -298,7 +298,7 @@
                 var year = array[5];
                 var month = array[6];
 
-                document.getElementById("card_title").innerText = raw_data_array[1] + "\t" + year + "년" + "\t" + month + "월";
+                document.getElementById("card_title").innerHTML = "<a href=\"" + "https://www.google.com/search?q=" + raw_data_array[1] + "+site+%3A+danawa.com" + "\">" + raw_data_array[1] + "</a>"+ "\t" + year + "년" + "\t" + month + "월";
             }
 
             function next() {
