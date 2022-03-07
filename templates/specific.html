@@ -144,7 +144,6 @@
                         <a class="collapse-item" href="/series/590">Radeon RX 590</a>
                         <a class="collapse-item" href="/series/580">Radeon RX 580</a>
                         <a class="collapse-item" href="/series/570">Radeon RX 570</a>
-                        <a class="collapse-item" href="/series/560">Radeon RX 560</a>
                     </div>
                 </div>
             </li>
@@ -290,6 +289,11 @@
         <script>
             window.onload = function () {
                 raw_data = document.getElementById("data").innerText;
+
+				if(raw_data == "[['CANNOT FIND THIS VGA']]"){
+					alert("더이상 자료가 없습니다.");
+				}
+				
                 raw_data_array = clear_data(raw_data).split(',');
                 specific_chart(raw_data_array);
 
