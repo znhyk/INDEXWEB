@@ -73,7 +73,7 @@ def csv_update_checker():
     with open("csv_time_pickle.bin","rb") as fr:
         pickle_time = pickle.load(fr)
     now_time=time.time()
-    if now_time-pickle_time < 10:#마지막 피클링(csv파일 직접 참조)된 시간으로부터 1시간 이내인 경우/개발자모드 세팅 10초
+    if now_time-pickle_time < 3600:#마지막 피클링(csv파일 직접 참조)된 시간으로부터 1시간 이내인 경우/개발자모드 세팅 10초
         return 0
     else:#마지막 피클링된 시간으로부터 1시간 이상 경과한 경우, 시간을 기록하고 다시 피클링한다.
         csv_update_time_pickler()
