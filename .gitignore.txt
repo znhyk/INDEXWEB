@@ -1,1 +1,2 @@
 visitor_pickle.bin
+ignoretest.txt
